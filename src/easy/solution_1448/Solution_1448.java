@@ -15,21 +15,22 @@ public class Solution_1448 {
         return goodNodes(root, root.val);
     }
 
-    public int goodNodes(TreeNode node, int parentVal) {
+    public int goodNodes(TreeNode node, int maxParentVal) {
         if (node == null) {
             return 0;
         }
-        int maxVal = parentVal;
-        if (node.val > parentVal) {
+        int maxVal = maxParentVal;
+        if (node.val > maxVal) {
             maxVal = node.val;
         }
-        int sum = 0;
-        sum += goodNodes(node.left, maxVal);
-        sum += goodNodes(node.right, maxVal);
-        if (node.val >= parentVal) {
-            sum++;
-        }
-        return sum;
+        //int sum = 0;
+        //sum += goodNodes(node.left, maxVal);
+        //sum += goodNodes(node.right, maxVal);
+        //if (node.val >= maxParentVal) {
+        //    sum++;
+        //}
+        //return sum;
+        return (node.val >= maxParentVal ? 1 : 0) + goodNodes(node.left, maxVal) + goodNodes(node.right, maxVal);
     }
 
     public static void main(String[] args) {
