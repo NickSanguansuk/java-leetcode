@@ -1,6 +1,6 @@
 package codewars.kyu7.find_the_stray_number;
 
-import org.junit.Test;
+import org.junit.Test; // JUnit 4
 import static org.junit.Assert.assertEquals;
 
 public class SolutionTest {
