@@ -2,7 +2,7 @@ package easy.solution_108;
 
 // 108. Convert Sorted Array to Binary Search Tree
 
-import easy.treenode.TreeNode;
+import utilities.treenode.TreeNode;
 
 import java.util.Arrays;
 

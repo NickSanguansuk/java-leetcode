@@ -1,0 +1,37 @@
+package easy.solution_326;
+
+// 326. Power of Three
+
+public class Solution_326 {
+
+    public boolean isPowerOfThree(int n) {
+
+        if (n == 0) {
+            return false;
+        }
+
+        if (n == 1) {
+            return true;
+        }
+
+        if (n % 3 == 0) {
+            return isPowerOfThree(n / 3);
+        } else {
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        Solution_326 solution = new Solution_326();
+
+        int n1 = 27;
+        System.out.println(solution.isPowerOfThree(n1));    // true
+
+        int n2 = 0;
+        System.out.println(solution.isPowerOfThree(n2));    // false
+
+        int n3 = 9;
+        System.out.println(solution.isPowerOfThree(n3));    // ture
+
+    }
+}

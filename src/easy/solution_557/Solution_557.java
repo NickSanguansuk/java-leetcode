@@ -25,14 +25,14 @@ public class Solution_557 {
     //}
 
     public String reverseWords(String s) {
-        StringBuilder result = new StringBuilder();
+        StringBuilder ans = new StringBuilder();
         String[] arr = s.split(" ");
         for (int i = 0; i < arr.length; i++) {
             StringBuilder word = new StringBuilder(arr[i]);
-            result.append(word.reverse().toString() + " ");
+            ans.append(word.reverse().toString() + " ");
         }
 
-        return result.toString().trim();
+        return ans.toString().trim();
     }
 
     public static void main(String[] args) {
